@@ -8,7 +8,9 @@
                   warn: item.type == 'warn',
                   fail: item.type == 'fail'
               }"
-      >{{ item.content }}
+      >
+      <img :src="item.icon">
+      <span>{{ item.content }}</span>
       </div>
     </div>
   </div>
@@ -25,13 +27,15 @@
         notices: []
       }
     },
+    mounted() {
+      console.log(this.notices)
+    },
     methods: {
       add(notice) {
         const name = getUuid();
         let _notice = Object.assign({
           name: name
         }, notice);
-        console.log(notice)
         this.notices.push(_notice);
         // 定时移除，单位：秒
         const duration = notice.duration;
@@ -64,26 +68,34 @@
 
   .alert-content {
     display: inline-block;
-    padding: 8px 16px;
-    border-radius: 3px;
+    padding: 5px;
+    width: 150px;
+    border-radius: 8px;
     margin-bottom: 8px;
+    height: 30px;
+    line-height: 30px;
   }
 
   .alert .success {
     color: white;
     background: #43d786;
-    box-shadow: 0 1px 6px #71f2ab;
+    box-shadow: 0 1px 6px #43d786;
   }
 
   .alert .warn {
     color: white;
     background: #f6714c;
-    box-shadow: 0 1px 6px #f88248;
+    box-shadow: 0 1px 6px #f6714c;
   }
 
   .alert .fail {
     color: white;
     background: #eb5e5b;
-    box-shadow: 0 1px 6px #f27c6e;
+    box-shadow: 0 1px 6px #eb5e5b;
+  }
+  .alert img{
+    width: 15%;
+    margin-right: 5px;
+    vertical-align: middle;
   }
 </style>
