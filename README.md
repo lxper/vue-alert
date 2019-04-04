@@ -17,21 +17,24 @@ new Vue({
 ### 调用
 ```javascript
 this.$Alert.info({
-  content: 'get success',
-  duration: 3,
-  type: 'success'
-});
-this.$Alert.info({
-  content: 'get warn',
-  duration: 3,
-  type: 'warn'
-});
-this.$Alert.info({
-  content: 'get fail',
-  duration: 3,
-  type: 'fail'
-});
-
+      content: 'success',
+      duration: 3,
+      type: 'success',
+      icon: 'http://129.204.88.180/wp-content/uploads/2019/03/success.png'
+    });
+    this.$Alert.info({
+      content: 'warn',
+      duration: 3,
+      type: 'warn',
+      icon: 'http://129.204.88.180/wp-content/uploads/2019/03/warn.png'
+    });
+    this.$Alert.info({
+      content: 'fail',
+      duration: 3,
+      type: 'fail',
+      icon: 'http://129.204.88.180/wp-content/uploads/2019/03/fail.png'
+    });
 ```
 ### 效果
-![](http://129.204.88.180/wp-content/uploads/2019/03/localhost_8080_-1.png)
+
+![](http://129.204.88.180/wp-content/uploads/2019/03/localhost_8080_-3-1.png)
