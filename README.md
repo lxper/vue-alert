@@ -33,4 +33,5 @@ this.$Alert.info({
 });
 
 ```
+### 效果
 ![](http://129.204.88.180/wp-content/uploads/2019/03/localhost_8080_-1.png)
